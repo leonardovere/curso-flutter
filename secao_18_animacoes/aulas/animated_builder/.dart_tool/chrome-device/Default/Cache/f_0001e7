@@ -1,0 +1,349 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/animation/animation_controller.dart', 'packages/flutter/src/animation/listener_helpers.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/material/colors.dart'], (function load__packages__animacao_tween__MaisSobreAnimacoes_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__animation__animation_controller$46dart, packages__flutter__src__animation__listener_helpers$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__material__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const transitions = packages__flutter__src__widgets__widget_span$46dart.src__widgets__transitions;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const ticker_provider = packages__flutter__src__widgets__widget_span$46dart.src__widgets__ticker_provider;
+  const animation_controller = packages__flutter__src__animation__animation_controller$46dart.src__animation__animation_controller;
+  const tween = packages__flutter__src__animation__listener_helpers$46dart.src__animation__tween;
+  const animation = packages__flutter__src__animation__listener_helpers$46dart.src__animation__animation;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  var MaisSobreAnimacoes = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    OffsetL: () => (T.OffsetL = dart.constFn(dart.legacy(ui.Offset)))(),
+    TweenOfOffsetL: () => (T.TweenOfOffsetL = dart.constFn(tween.Tween$(T.OffsetL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    TransformL: () => (T.TransformL = dart.constFn(dart.legacy(basic.Transform)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    BuildContextLAndWidgetLToTransformL: () => (T.BuildContextLAndWidgetLToTransformL = dart.constFn(dart.fnType(T.TransformL(), [T.BuildContextL(), T.WidgetL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 34,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 62,
+        [_Location_file]: "file:///F:/Cursos%20de%20desenvolvimento/Cursos%20Udemy/Curso%20de%20Flutter-Jamilton/secao_18_animacoes/aulas/animated_builder/lib/MaisSobreAnimacoes.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 15,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5, C[6] || CT.C6, C[7] || CT.C7, C[8] || CT.C8, C[9] || CT.C9], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///F:/Cursos%20de%20desenvolvimento/Cursos%20Udemy/Curso%20de%20Flutter-Jamilton/secao_18_animacoes/aulas/animated_builder/lib/MaisSobreAnimacoes.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///F:/Cursos%20de%20desenvolvimento/Cursos%20Udemy/Curso%20de%20Flutter-Jamilton/secao_18_animacoes/aulas/animated_builder/lib/MaisSobreAnimacoes.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "offset",
+        [_Location_column]: 13,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15, C[16] || CT.C16], T._LocationL());
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 75,
+        [_Location_file]: "file:///F:/Cursos%20de%20desenvolvimento/Cursos%20Udemy/Curso%20de%20Flutter-Jamilton/secao_18_animacoes/aulas/animated_builder/lib/MaisSobreAnimacoes.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "animation",
+        [_Location_column]: 9,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 9,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19, C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 53,
+        [_Location_file]: "file:///F:/Cursos%20de%20desenvolvimento/Cursos%20Udemy/Curso%20de%20Flutter-Jamilton/secao_18_animacoes/aulas/animated_builder/lib/MaisSobreAnimacoes.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 7,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 7,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24, C[25] || CT.C25, C[26] || CT.C26], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 50,
+        [_Location_file]: "file:///F:/Cursos%20de%20desenvolvimento/Cursos%20Udemy/Curso%20de%20Flutter-Jamilton/secao_18_animacoes/aulas/animated_builder/lib/MaisSobreAnimacoes.dart"
+      });
+    }
+  }, false);
+  var C = Array(27).fill(void 0);
+  var I = ["package:animacao_tween/MaisSobreAnimacoes.dart"];
+  MaisSobreAnimacoes.MaisSobreAnimacoes = class MaisSobreAnimacoes$ extends framework.StatefulWidget {
+    createState() {
+      return new MaisSobreAnimacoes._MaisSobreAnimacoesState.new();
+    }
+  };
+  (MaisSobreAnimacoes.MaisSobreAnimacoes.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    MaisSobreAnimacoes.MaisSobreAnimacoes.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = MaisSobreAnimacoes.MaisSobreAnimacoes.prototype;
+  dart.addTypeTests(MaisSobreAnimacoes.MaisSobreAnimacoes);
+  dart.addTypeCaches(MaisSobreAnimacoes.MaisSobreAnimacoes);
+  dart.setMethodSignature(MaisSobreAnimacoes.MaisSobreAnimacoes, () => ({
+    __proto__: dart.getMethods(MaisSobreAnimacoes.MaisSobreAnimacoes.__proto__),
+    createState: dart.fnType(dart.legacy(MaisSobreAnimacoes._MaisSobreAnimacoesState), [])
+  }));
+  dart.setLibraryUri(MaisSobreAnimacoes.MaisSobreAnimacoes, I[0]);
+  var _controller = dart.privateName(MaisSobreAnimacoes, "_controller");
+  var _animation = dart.privateName(MaisSobreAnimacoes, "_animation");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const State_TickerProviderStateMixin$36 = class State_TickerProviderStateMixin extends framework.State$(dart.legacy(MaisSobreAnimacoes.MaisSobreAnimacoes)) {};
+  (State_TickerProviderStateMixin$36.new = function() {
+    ticker_provider.TickerProviderStateMixin$(dart.legacy(MaisSobreAnimacoes.MaisSobreAnimacoes))[dart.mixinNew].call(this);
+    State_TickerProviderStateMixin$36.__proto__.new.call(this);
+  }).prototype = State_TickerProviderStateMixin$36.prototype;
+  dart.applyMixin(State_TickerProviderStateMixin$36, ticker_provider.TickerProviderStateMixin$(dart.legacy(MaisSobreAnimacoes.MaisSobreAnimacoes)));
+  MaisSobreAnimacoes._MaisSobreAnimacoesState = class _MaisSobreAnimacoesState extends State_TickerProviderStateMixin$36 {
+    initState() {
+      super.initState();
+      this[_controller] = new animation_controller.AnimationController.new({vsync: this, duration: new core.Duration.new({seconds: 2})});
+      this[_animation] = new (T.TweenOfOffsetL()).new({begin: new ui.Offset.new(0.0, 0.0), end: new ui.Offset.new(60.0, 60.0)}).animate(this[_controller]);
+      this[_controller].forward();
+    }
+    dispose() {
+      super.dispose();
+      this[_controller].dispose();
+    }
+    build(context) {
+      return new container.Container.new({padding: new edge_insets.EdgeInsets.all(20.0), color: colors.Colors.white, child: new transitions.AnimatedBuilder.new({animation: this[_animation], child: new basic.Stack.new({children: T.JSArrayOfWidgetL().of([new basic.Positioned.new({width: 180.0, height: 180.0, left: 0.0, top: 0.0, child: new image.Image.asset("assets/images/logo.png", {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3})]), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), builder: dart.fn((context, child) => new basic.Transform.translate({offset: ui.Offset.as(this[_animation].value), child: child, $creationLocationd_0dea112b090073317d4: C[13] || CT.C13}), T.BuildContextLAndWidgetLToTransformL()), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22});
+    }
+  };
+  (MaisSobreAnimacoes._MaisSobreAnimacoesState.new = function() {
+    this[_controller] = null;
+    this[_animation] = null;
+    MaisSobreAnimacoes._MaisSobreAnimacoesState.__proto__.new.call(this);
+    ;
+  }).prototype = MaisSobreAnimacoes._MaisSobreAnimacoesState.prototype;
+  dart.addTypeTests(MaisSobreAnimacoes._MaisSobreAnimacoesState);
+  dart.addTypeCaches(MaisSobreAnimacoes._MaisSobreAnimacoesState);
+  dart.setMethodSignature(MaisSobreAnimacoes._MaisSobreAnimacoesState, () => ({
+    __proto__: dart.getMethods(MaisSobreAnimacoes._MaisSobreAnimacoesState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(MaisSobreAnimacoes._MaisSobreAnimacoesState, I[0]);
+  dart.setFieldSignature(MaisSobreAnimacoes._MaisSobreAnimacoesState, () => ({
+    __proto__: dart.getFields(MaisSobreAnimacoes._MaisSobreAnimacoesState.__proto__),
+    [_controller]: dart.fieldType(dart.legacy(animation_controller.AnimationController)),
+    [_animation]: dart.fieldType(dart.legacy(animation.Animation))
+  }));
+  dart.trackLibraries("packages/animacao_tween/MaisSobreAnimacoes.dart", {
+    "package:animacao_tween/MaisSobreAnimacoes.dart": MaisSobreAnimacoes
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["MaisSobreAnimacoes.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAI4C;IAA0B;;;;;;EACtE;;;;;;;;;;;;;;;;;;;;;;;AAUqB,MAAX;AAKL,MAHD,oBAAc,yDACL,gBACG,gCAAkB;AAgBR,MAHtB,mBAAa,AAGX,qCAFO,kBAAO,KAAG,WACZ,kBAAO,MAAI,gBACR;AAEW,MAArB,AAAY;IACd;;AAKiB,MAAT;AACe,MAArB,AAAY;IACd;UAG0B;AACxB,YAAO,uCACe,+BAAI,cACV,4BACP,gDACM,yBACJ,+BACK,yBACR,iCACS,eACC,aACF,UACD,YACQ,sBAAM,mNAIhB,SAAC,SAAS,UASA,oDACP,AAAW,gCACZ,KAAK;IAKtB;;;IAxEoB;IACV;;;EAwEZ","file":"../../../../../../../packages/animacao_tween/MaisSobreAnimacoes.dart.lib.js"}');
+  // Exports:
+  return {
+    MaisSobreAnimacoes: MaisSobreAnimacoes
+  };
+}));
+
+//# sourceMappingURL=MaisSobreAnimacoes.dart.lib.js.map
